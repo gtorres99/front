@@ -1,0 +1,186 @@
+@use 'base/variables' as v;
+@use 'base/mixins'as m;
+
+.header{
+
+    display: flex;
+    background-color: #24292e;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 12rem;
+
+
+    @include m.tablet{
+
+        display: grid;
+        @include m.grid(4,2rem);
+
+    }
+}
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+
+    a{
+
+        font-family: 'Montserrat', sans-serif;
+        color: #13b497;
+        font-size: 4rem;
+    }
+    svg{
+
+        fill: #ffff;
+        width: 4.6rem;
+        height: 4.6rem;
+    }
+}
+
+.buscador{
+
+    display: none;
+
+    @include m.tablet{
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .formulario{
+
+        display: flex;
+
+        input{
+
+            padding: 1rem;
+            width: 72.5rem;
+            background-color: #1c2126;
+            border: none;
+            color: #fff;
+            border-radius: 1.2rem;
+        }
+        button{
+
+            border: none;
+            background-color: #1c2126;
+            margin-left: -3rem;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            fill: #fff;
+
+        }
+    }
+
+    }
+}
+
+.iconos{
+
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    grid-auto-flow: column;
+    
+    .visible{
+
+        display: none;
+
+        @include m.tablet{
+
+            display: block;
+        }
+    }
+   
+}
+
+.icono{
+
+    background-color: #2f363d;
+    padding: 1rem;
+    border-radius: 1.2rem;
+
+    svg{
+
+        width: 2.2rem;
+        height: 2.15rem;
+        fill: #13b497;
+   
+    }
+    
+}
+
+.perfil{
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    border: 1px solid #9696962c;
+    border-radius: 1.2rem;
+    width: 17rem;
+
+    .usuario{
+
+        background-color: #c4c4c4;
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            width: 5.6rem;
+            height: 2.6rem;
+            fill: #fff;
+        }
+    }
+
+    p{
+        display: none;
+        @include m.tablet{
+            font-size: 1.6rem;
+            display: block;
+        }
+    }
+
+    button{
+
+        background-color: #ffffff00;
+        border: none;
+        cursor: pointer;
+        fill: #fff;
+    }
+
+}
+
+.titulo{
+
+    display: flex;
+    text-align: start;
+    padding: .7rem;
+    align-items: center;
+    background-color: #2d3339;
+
+    h1{
+        display: none;
+
+        @include m.tablet{
+
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            color: #13b497;
+            margin-left: 9.3rem;
+    
+        }
+    }
+}
